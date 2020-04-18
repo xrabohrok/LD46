@@ -17,6 +17,15 @@ TextureImporter:
   - first:
       213: 6831896123756909636
     second: 72ppi-ui-trash
+  - first:
+      213: -8512078052396932261
+    second: 72ppi-big
+  - first:
+      213: 2986803048017757808
+    second: 72ppi-middle
+  - first:
+      213: 4403299992607097588
+    second: 72ppi-smallest
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -90,6 +99,27 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+      name: 72ppi-big
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 419
+        width: 125
+        height: 177
+      alignment: 9
+      pivot: {x: 0.456, y: 0.5169492}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b536b7a3c160fd980800000000000000
+      internalID: -8512078052396932261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: 72ppi-buttons-anotherDude
       rect:
         serializedVersion: 2
@@ -148,6 +178,48 @@ TextureImporter:
       bones: []
       spriteID: f7c39fa1386f0cf50800000000000000
       internalID: 6899785672085290111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72ppi-middle
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 446
+        width: 113
+        height: 150
+      alignment: 9
+      pivot: {x: 0.50442475, y: 0.61}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07607232c81437920800000000000000
+      internalID: 2986803048017757808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72ppi-smallest
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 54
+        width: 111
+        height: 86
+      alignment: 9
+      pivot: {x: 0.4774775, y: 1.0639535}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f283da730aab1d30800000000000000
+      internalID: 4403299992607097588
       vertices: []
       indices: 
       edges: []
