@@ -26,6 +26,30 @@ TextureImporter:
   - first:
       213: 4403299992607097588
     second: 72ppi-smallest
+  - first:
+      213: -2343462345215036285
+    second: 72ppi-creecher-big-idle1
+  - first:
+      213: -973508739257511178
+    second: 72ppi-creecher-big-idle2
+  - first:
+      213: 3275082309673129601
+    second: 72ppi-creecher-big-idle3
+  - first:
+      213: -8048221575195686582
+    second: 72ppi-creecher-big-idle4
+  - first:
+      213: 1904912712292798403
+    second: 72ppi-creecher-small-idle1
+  - first:
+      213: -5012345691484713388
+    second: 72ppi-creecher-small-idle2
+  - first:
+      213: -8394823550983356574
+    second: 72ppi-creecher-small-idle3
+  - first:
+      213: 1275418933316997001
+    second: 72ppi-creecher-small-idle4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -102,7 +126,7 @@ TextureImporter:
       name: 72ppi-big
       rect:
         serializedVersion: 2
-        x: 474
+        x: 601
         y: 419
         width: 125
         height: 177
@@ -162,6 +186,174 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: 72ppi-creecher-big-idle1
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 419
+        width: 125
+        height: 177
+      alignment: 9
+      pivot: {x: 0.456, y: 0.5169492}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38434f8c9695a7fd0800000000000000
+      internalID: -2343462345215036285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72ppi-creecher-big-idle2
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 238
+        width: 113
+        height: 179
+      alignment: 9
+      pivot: {x: 0.43362832, y: 0.5111732}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f251d2a5f66d72f0800000000000000
+      internalID: -973508739257511178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72ppi-creecher-big-idle3
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 242
+        width: 121
+        height: 182
+      alignment: 9
+      pivot: {x: 0.4876033, y: 0.50274724}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1869b3e220e637d20800000000000000
+      internalID: 3275082309673129601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72ppi-creecher-big-idle4
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 414
+        width: 125
+        height: 182
+      alignment: 9
+      pivot: {x: 0.472, y: 0.50274724}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4983d06e19fe4090800000000000000
+      internalID: -8048221575195686582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72ppi-creecher-small-idle1
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 54
+        width: 111
+        height: 86
+      alignment: 9
+      pivot: {x: 0.4774775, y: 1.0639535}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cf8658e40c9f6a10800000000000000
+      internalID: 1904912712292798403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72ppi-creecher-small-idle2
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 52
+        width: 126
+        height: 88
+      alignment: 9
+      pivot: {x: 0.50793654, y: 1.0397727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e089f6622907ab0800000000000000
+      internalID: -5012345691484713388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72ppi-creecher-small-idle3
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 53
+        width: 110
+        height: 87
+      alignment: 9
+      pivot: {x: 0.5181818, y: 1.0517242}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26fbd8345789f7b80800000000000000
+      internalID: -8394823550983356574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72ppi-creecher-small-idle4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 41
+        width: 99
+        height: 99
+      alignment: 9
+      pivot: {x: 0.4949495, y: 0.92424244}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98fca2c23c233b110800000000000000
+      internalID: 1275418933316997001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: 72ppi-dudeSize
       rect:
         serializedVersion: 2
@@ -186,8 +378,8 @@ TextureImporter:
       name: 72ppi-middle
       rect:
         serializedVersion: 2
-        x: 601
-        y: 446
+        x: 474
+        y: 262
         width: 113
         height: 150
       alignment: 9
@@ -207,7 +399,7 @@ TextureImporter:
       name: 72ppi-smallest
       rect:
         serializedVersion: 2
-        x: 1
+        x: 342
         y: 54
         width: 111
         height: 86
