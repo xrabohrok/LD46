@@ -22,7 +22,11 @@ public class CreechurBehavior : MonoBehaviour
     [PropertyTooltip("How fast they will move as a force applied")]
     public float moveForce;
 
-    public enum goals { ZERO, WANDER, WAIT }
+    public goals startState = goals.WANDER;
+
+    public enum goals { ZERO, WANDER, WAIT,
+        GRABBED
+    }
 
     private float behaviourTime;
     private goals currGoal;
@@ -31,15 +35,52 @@ public class CreechurBehavior : MonoBehaviour
     private Vector2 moveDir;
 
     private Rigidbody2D physical;
+    private Clickable clicker;
+
+    private static MouseBehaviour mousey;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        nextGoal = goals.WANDER;
+        nextGoal = startState;
         currGoal = goals.ZERO;
 
         physical = this.GetComponent<Rigidbody2D>();
+        clicker = this.GetComponent<Clickable>();
+
+        if (clicker != null)
+        {
+            clicker.setClickDownCallback(wasMouseDowned);
+            clicker.setClickReleaseCallback(wasMouseUpped);
+        }
+
+        if (mousey == null)
+        {
+            mousey = FindObjectOfType<MouseBehaviour>();
+        }
+
+    }
+
+    private void wasMouseDowned(Clickable thing)
+    {
+        Debug.Log("Attached monster");
+        nextGoal = goals.GRABBED;
+        physical.freezeRotation = false;
+        physical.gravityScale = 1;
+
+        mousey.Attach(physical);
+    }
+
+    private void wasMouseUpped(Clickable thing)
+    {
+        Debug.Log("Detached Monster");
+
+        nextGoal = goals.WAIT;
+        physical.freezeRotation = true;
+        physical.transform.rotation = Quaternion.identity;
+        physical.gravityScale = 0;
     }
 
     private float WeightedRandomRange(float percentWeightThatIsRandom, float maxValue)
@@ -61,11 +102,27 @@ public class CreechurBehavior : MonoBehaviour
         {
             WaitAction();
         }
+        else if (currGoal == goals.GRABBED)
+        {
+            GrabbedAction();
+        }
 
-        // Debug.Log($"Is on {Enum.GetName(typeof(goals), currGoal)}");
+        Debug.Log($"Is on {Enum.GetName(typeof(goals), currGoal)}");
 
         behaviourTime -= Time.deltaTime;
 
+    }
+
+    private void GrabbedAction()
+    {
+        //basically do nothing
+        //cannot escape this event on their own
+
+        //however it is unlikely that the mouse will be over the creechur when pulled up, so we have to watch for that ourselves
+        if (Input.GetMouseButtonUp(0))
+        {
+            wasMouseUpped(clicker);
+        }
     }
 
     private void WaitAction()

@@ -34,7 +34,7 @@ public class ClickMaster : MonoBehaviour {
 
 	    if (Input.GetMouseButtonDown(0))
 	    {
-            gameObject.GetComponent<MassSoundSubscriber>().playSound(gameObject.transform.position, "Click");
+            // gameObject.GetComponent<MassSoundSubscriber>().playSound(gameObject.transform.position, "Click");
             foreach (var clicked in hovered)
 	        {
 	            if (currClickable == null || clicked.priority > currClickable.priority)
