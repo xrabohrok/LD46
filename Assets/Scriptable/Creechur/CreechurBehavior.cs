@@ -55,15 +55,14 @@ public class CreechurBehavior : MonoBehaviour
 
         if (currGoal == goals.WANDER)
         {
-            Debug.Log("Is Wandering");
             WanderAction();
         }
         else if (currGoal == goals.WAIT)
         {
-            Debug.Log("Is Waiting");
-
             WaitAction();
         }
+
+        // Debug.Log($"Is on {Enum.GetName(typeof(goals), currGoal)}");
 
         behaviourTime -= Time.deltaTime;
 
