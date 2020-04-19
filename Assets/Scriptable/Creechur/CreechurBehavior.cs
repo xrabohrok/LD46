@@ -61,7 +61,8 @@ public class CreechurBehavior : MonoBehaviour, IoutBoxable
         WAIT,
         GRABBED,
         HUNTING,
-        DIE
+        DIE,
+        SOLD
     }
 
     public enum emotes { NEUTRAL, HUNGRY}
@@ -169,6 +170,10 @@ public class CreechurBehavior : MonoBehaviour, IoutBoxable
         {
             DieAction();
         }
+        else if (currGoal == goals.SOLD)
+        {
+            SoldAction();
+        }
 
         Debug.Log($"Is on {Enum.GetName(typeof(goals), currGoal)}");
 
@@ -222,6 +227,24 @@ public class CreechurBehavior : MonoBehaviour, IoutBoxable
             sprite.flipX = !isFacingLeft;
         }
 
+    }
+
+    private void SoldAction()
+    {
+        if (lastGoal != goals.SOLD)
+        {
+            //do the fallaway thing
+            clicker.enabled = false;
+            physical.AddTorque(5f);
+            physical.gravityScale = 1;
+            physical.freezeRotation = false;
+            behaviourTime = 4;
+        }
+
+        if (behaviourTime <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void DieAction()
@@ -373,7 +396,7 @@ public class CreechurBehavior : MonoBehaviour, IoutBoxable
 
     public void disposed()
     {
-        //do the fallaway thing
-        // Destroy(gameObject);
+
+        nextGoal = goals.SOLD;
     }
 }
