@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -22,11 +23,38 @@ public class CreechurBehavior : MonoBehaviour
     [PropertyTooltip("How fast they will move as a force applied")]
     public float moveForce;
 
+    [PropertyTooltip("Upper Limit to hunger")]
+    public float maxHunger = 100;
+
+    [PropertyTooltip("Hunger in units per second (already negative)")]
+    public float hungerDegredation = 1;
+
+    [PropertyRange(0, "maxHunger")]
+    public float feelHungryThreshold = 50;
+
+    public float foodPermanance = 5;
+
+    public float huntCooldownTime = 2;
+    
+    private float currentHunger;
+
+    private GameObject currSeenFood;
+    private float relaxTimer;
+    private float huntCooldown = -1;
+
     public goals startState = goals.WANDER;
 
-    public enum goals { ZERO, WANDER, WAIT,
-        GRABBED
+    public enum goals { 
+        ZERO,
+        WANDER,
+        WAIT,
+        GRABBED,
+        HUNTING,
+        DIE
     }
+
+    public enum emotes { NEUTRAL, HUNGRY}
+    private emotes currEmote;
 
     private float behaviourTime;
     private goals currGoal;
@@ -60,6 +88,9 @@ public class CreechurBehavior : MonoBehaviour
         {
             mousey = FindObjectOfType<MouseBehaviour>();
         }
+
+        currentHunger = maxHunger;
+        currEmote = emotes.NEUTRAL;
 
     }
 
@@ -106,10 +137,85 @@ public class CreechurBehavior : MonoBehaviour
         {
             GrabbedAction();
         }
+        else if (currGoal == goals.HUNTING)
+        {
+            HuntAction();
+        }
+        else if (currGoal == goals.DIE)
+        {
+            DieAction();
+        }
 
         Debug.Log($"Is on {Enum.GetName(typeof(goals), currGoal)}");
 
+        if (currentHunger < feelHungryThreshold)
+        {
+            Debug.Log("Now Hungry");
+            currEmote = emotes.HUNGRY;
+        }
+        else if (currentHunger >= feelHungryThreshold)
+        {
+            currEmote = emotes.NEUTRAL;
+        }
+
         behaviourTime -= Time.deltaTime;
+        currentHunger -= hungerDegredation * Time.deltaTime;
+        huntCooldown -= Time.deltaTime;
+
+        if (relaxTimer > 0)
+        {
+            relaxTimer -= Time.deltaTime;
+        }
+        else
+        {
+            currSeenFood = null;
+        }
+
+        if (currentHunger <= 0)
+        {
+            nextGoal = goals.DIE;
+        }
+
+    }
+
+    private void DieAction()
+    {
+        //play death anim, for now just wink out.
+        Destroy(gameObject);
+    }
+
+    private void HuntAction()
+    {
+        //the creechur is going to ask the food if it hasn't been claimed. If it has, then it will go back to waiting, otherwise it will move for it
+        //there is a hunt cooldown to prevent spazzing
+        huntCooldown = huntCooldownTime;
+
+        var mine = true;
+        if (currSeenFood != null)
+        {
+            var food = currSeenFood.GetComponent<Food>();
+            if (food != null)
+            {
+                mine = food.claim(gameObject);
+            }
+            else
+            {
+                mine = false;
+            }
+        }
+
+        if (mine && currSeenFood != null)
+        {
+            var dir = currSeenFood.transform.position - gameObject.transform.position;
+            dir = new Vector3(dir.x, dir.y);
+
+            physical.AddForce(dir.normalized * moveForce);
+        }
+        else
+        {
+            nextGoal = goals.WAIT;
+        }
+
 
     }
 
@@ -135,6 +241,7 @@ public class CreechurBehavior : MonoBehaviour
         //nothing to do
 
         nextGoal = behaviourTime < 0 ? goals.WANDER : goals.WAIT;
+        canGoHungry();
 
     }
 
@@ -153,5 +260,47 @@ public class CreechurBehavior : MonoBehaviour
         }
 
         nextGoal = behaviourTime < 0 ? goals.WAIT : goals.WANDER;
+        canGoHungry();
+    }
+
+    private void canGoHungry()
+    {
+        if (currSeenFood != null && currEmote == emotes.HUNGRY && huntCooldown <= 0)
+        {
+            nextGoal = goals.HUNTING;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (currSeenFood == null && col.tag == "food")
+        {
+            currSeenFood = col.gameObject;
+            relaxTimer = foodPermanance;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (currSeenFood == col.gameObject)
+        {
+            currSeenFood = null;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (currGoal == goals.HUNTING)
+        {
+            var food = currSeenFood.GetComponent<Food>();
+            if (food != null && food.claim(gameObject))
+            {
+                currentHunger = maxHunger;
+                //play eat anim
+                Destroy(currSeenFood);
+                currSeenFood = null;
+                nextGoal = goals.WAIT;
+            }
+        }
     }
 }
