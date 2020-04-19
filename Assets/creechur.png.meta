@@ -38,6 +38,9 @@ TextureImporter:
   - first:
       213: 2968831556425919637
     second: small-walk4
+  - first:
+      213: 8262128659979184493
+    second: small-hang
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -219,11 +222,32 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: small-hang
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 30
+        width: 104
+        height: 113
+      alignment: 9
+      pivot: {x: 0.50961536, y: 0.86725664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6922aadd3af8a270800000000000000
+      internalID: 8262128659979184493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: small-idle1
       rect:
         serializedVersion: 2
-        x: 239
-        y: 246
+        x: 358
+        y: 156
         width: 111
         height: 86
       alignment: 9
@@ -243,8 +267,8 @@ TextureImporter:
       name: small-idle2
       rect:
         serializedVersion: 2
-        x: 361
-        y: 335
+        x: 332
+        y: 244
         width: 126
         height: 88
       alignment: 9
@@ -264,8 +288,8 @@ TextureImporter:
       name: small-idle3
       rect:
         serializedVersion: 2
-        x: 239
-        y: 155
+        x: 358
+        y: 67
         width: 110
         height: 87
       alignment: 9
@@ -285,7 +309,7 @@ TextureImporter:
       name: small-idle4
       rect:
         serializedVersion: 2
-        x: 125
+        x: 231
         y: 47
         width: 99
         height: 99
@@ -306,8 +330,8 @@ TextureImporter:
       name: small-walk1
       rect:
         serializedVersion: 2
-        x: 361
-        y: 425
+        x: 332
+        y: 334
         width: 131
         height: 86
       alignment: 9
@@ -327,8 +351,8 @@ TextureImporter:
       name: small-walk2
       rect:
         serializedVersion: 2
-        x: 226
-        y: 57
+        x: 332
+        y: 422
         width: 133
         height: 89
       alignment: 9
@@ -348,8 +372,8 @@ TextureImporter:
       name: small-walk3
       rect:
         serializedVersion: 2
-        x: 361
-        y: 244
+        x: 239
+        y: 153
         width: 117
         height: 89
       alignment: 9
@@ -369,7 +393,7 @@ TextureImporter:
       name: small-walk4
       rect:
         serializedVersion: 2
-        x: 1
+        x: 107
         y: 41
         width: 122
         height: 102
