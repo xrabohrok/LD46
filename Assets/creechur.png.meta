@@ -1,0 +1,428 @@
+fileFormatVersion: 2
+guid: f4f6495ea90947441b40485ca7c57341
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6685894108767063380
+    second: big-idle1
+  - first:
+      213: 4009428030553789875
+    second: big-idle2
+  - first:
+      213: -1965901491531437272
+    second: big-idle3
+  - first:
+      213: 5501663079801052629
+    second: big-idle4
+  - first:
+      213: 5172612782160188734
+    second: small-idle1
+  - first:
+      213: -1589934200489776554
+    second: small-idle2
+  - first:
+      213: 3875851706666266198
+    second: small-idle3
+  - first:
+      213: -3210782322899404099
+    second: small-idle4
+  - first:
+      213: -7337775564823960215
+    second: small-walk1
+  - first:
+      213: 8607887379031386941
+    second: small-walk2
+  - first:
+      213: -6002034084937488203
+    second: small-walk3
+  - first:
+      213: 2968831556425919637
+    second: small-walk4
+  - first:
+      213: 8262128659979184493
+    second: small-hang
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: big-idle1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 334
+        width: 125
+        height: 177
+      alignment: 9
+      pivot: {x: 0.456, y: 0.5169492}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca2ff014bbee633a0800000000000000
+      internalID: -6685894108767063380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big-idle2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 148
+        width: 113
+        height: 179
+      alignment: 9
+      pivot: {x: 0.43362832, y: 0.5111732}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b517a90d8954a730800000000000000
+      internalID: 4009428030553789875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big-idle3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 145
+        width: 121
+        height: 182
+      alignment: 9
+      pivot: {x: 0.4876033, y: 0.50274724}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82babdd5207b7b4e0800000000000000
+      internalID: -1965901491531437272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big-idle4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 329
+        width: 125
+        height: 182
+      alignment: 9
+      pivot: {x: 0.472, y: 0.50274724}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd5c690c65d95c40800000000000000
+      internalID: 5501663079801052629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small-hang
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 30
+        width: 104
+        height: 113
+      alignment: 9
+      pivot: {x: 0.50961536, y: 0.86725664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6922aadd3af8a270800000000000000
+      internalID: 8262128659979184493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small-idle1
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 156
+        width: 111
+        height: 86
+      alignment: 9
+      pivot: {x: 0.4774775, y: 1.0639535}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e359d417befc8c740800000000000000
+      internalID: 5172612782160188734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small-idle2
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 244
+        width: 126
+        height: 88
+      alignment: 9
+      pivot: {x: 0.50793654, y: 1.0397727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65aef8bb44b6fe9e0800000000000000
+      internalID: -1589934200489776554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small-idle3
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 67
+        width: 110
+        height: 87
+      alignment: 9
+      pivot: {x: 0.5181818, y: 1.0517242}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65e2fe1979ac9c530800000000000000
+      internalID: 3875851706666266198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small-idle4
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 47
+        width: 99
+        height: 99
+      alignment: 9
+      pivot: {x: 0.4949495, y: 0.92424244}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dba3a702d720173d0800000000000000
+      internalID: -3210782322899404099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small-walk1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 334
+        width: 131
+        height: 86
+      alignment: 9
+      pivot: {x: 0.48091602, y: 1.0639535}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9656021400cfa2a90800000000000000
+      internalID: -7337775564823960215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small-walk2
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 422
+        width: 133
+        height: 89
+      alignment: 9
+      pivot: {x: 0.49624062, y: 1.0280899}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3bebb5f6fb557770800000000000000
+      internalID: 8607887379031386941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small-walk3
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 153
+        width: 117
+        height: 89
+      alignment: 9
+      pivot: {x: 0.47863248, y: 1.0280899}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b8a385cccd74bca0800000000000000
+      internalID: -6002034084937488203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small-walk4
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 41
+        width: 122
+        height: 102
+      alignment: 9
+      pivot: {x: 0.5163934, y: 0.89705884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59cacbe2298633920800000000000000
+      internalID: 2968831556425919637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
