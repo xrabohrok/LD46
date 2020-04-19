@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using Sirenix.OdinInspector;
+using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 
-[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D), typeof(Animator))]
 public class CreechurBehavior : MonoBehaviour
 {
 
@@ -72,6 +73,10 @@ public class CreechurBehavior : MonoBehaviour
 
     private Rigidbody2D physical;
     private Clickable clicker;
+    private Animator anim;
+    private SpriteRenderer sprite;
+
+    private bool isFacingLeft = true;
 
     private static MouseBehaviour mousey;
 
@@ -86,6 +91,8 @@ public class CreechurBehavior : MonoBehaviour
 
         physical = this.GetComponent<Rigidbody2D>();
         clicker = this.GetComponent<Clickable>();
+        anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
 
         if (clicker != null)
         {
@@ -110,6 +117,8 @@ public class CreechurBehavior : MonoBehaviour
         nextGoal = goals.GRABBED;
         physical.freezeRotation = false;
         physical.gravityScale = 1;
+        anim.SetBool("isPickedUp", true);
+
 
         mousey.Attach(physical);
     }
@@ -122,6 +131,7 @@ public class CreechurBehavior : MonoBehaviour
         physical.freezeRotation = true;
         physical.transform.rotation = Quaternion.identity;
         physical.gravityScale = 0;
+        anim.SetBool("isPickedUp", false);
     }
 
     private float WeightedRandomRange(float percentWeightThatIsRandom, float maxValue)
@@ -162,10 +172,13 @@ public class CreechurBehavior : MonoBehaviour
         {
             Debug.Log("Now Hungry");
             currEmote = emotes.HUNGRY;
+            anim.SetBool("isHungry", true);
         }
         else if (currentHunger >= feelHungryThreshold)
         {
             currEmote = emotes.NEUTRAL;
+            anim.SetBool("isHungry", false);
+
         }
 
         behaviourTime -= Time.deltaTime;
@@ -196,6 +209,14 @@ public class CreechurBehavior : MonoBehaviour
         }
 
         //set maturity bit
+        anim.SetBool("isMature", isMature);
+        anim.SetFloat("Speed", physical.velocity.magnitude);
+
+        if (Mathf.Abs(physical.velocity.x) > .2)
+        {
+            isFacingLeft = physical.velocity.x < 0;
+            sprite.flipX = !isFacingLeft;
+        }
 
     }
 
@@ -272,12 +293,10 @@ public class CreechurBehavior : MonoBehaviour
         {
             behaviourTime = WeightedRandomRange(randomVariance, wanderRange);
             moveDir = Random.insideUnitCircle;
-            //play walk anim
         }
         else
         {
             physical.AddForce(moveForce * moveDir);
-            //set play speed
         }
 
         nextGoal = behaviourTime < 0 ? goals.WAIT : goals.WANDER;
