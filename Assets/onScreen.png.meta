@@ -26,6 +26,27 @@ TextureImporter:
   - first:
       213: -7791361727833574406
     second: ui-trash
+  - first:
+      213: 4015377611597245395
+    second: map chunks-2LEVEL-front
+  - first:
+      213: 2752733335229111185
+    second: map chunks-2LEVEL-TUBE
+  - first:
+      213: -8525342158113969755
+    second: map chunks-2LEVEL
+  - first:
+      213: 6152248360860185299
+    second: map chunks-3LEVEL-front
+  - first:
+      213: 8971894700572237057
+    second: map chunks-3LEVEL
+  - first:
+      213: 8259431876301724364
+    second: map chunks-FLOOR-TUBE
+  - first:
+      213: 5280994442114935891
+    second: map chunks-FLOOR
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,32 +120,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: big
-      rect:
-        serializedVersion: 2
-        x: 474
-        y: 419
-        width: 125
-        height: 177
-      alignment: 9
-      pivot: {x: 0.456, y: 0.5169492}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1858b5f6c0c1546d0800000000000000
-      internalID: -3006966336466483839
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: buttons-anotherDude
       rect:
         serializedVersion: 2
         x: 769
-        y: 633
+        y: 1533
         width: 205
         height: 205
       alignment: 0
@@ -145,7 +145,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 769
-        y: 426
+        y: 1326
         width: 205
         height: 205
       alignment: 0
@@ -162,13 +162,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dudeSize
+      name: map chunks-2LEVEL-front
       rect:
         serializedVersion: 2
-        x: 769
-        y: 840
-        width: 210
-        height: 183
+        x: 1696
+        y: 1476
+        width: 292
+        height: 124
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,50 +176,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 32a06ba0996874320800000000000000
-      internalID: 2542148506541754915
+      spriteID: 3db6f42d9ac79b730800000000000000
+      internalID: 4015377611597245395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: middle
+      name: map chunks-2LEVEL-TUBE
       rect:
         serializedVersion: 2
-        x: 601
-        y: 446
-        width: 113
-        height: 150
-      alignment: 9
-      pivot: {x: 0.50442475, y: 0.61}
+        x: 1449
+        y: 966
+        width: 364
+        height: 473
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9ed29cfb0afdc4d0800000000000000
-      internalID: -3112556838054076773
+      spriteID: 19b15bf326ca33620800000000000000
+      internalID: 2752733335229111185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: smallest
+      name: map chunks-2LEVEL
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1722
+        width: 873
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a964f4f976efa980800000000000000
+      internalID: -8525342158113969755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map chunks-3LEVEL-front
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 1602
+        width: 310
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d2fc07c94d216550800000000000000
+      internalID: 6152248360860185299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map chunks-3LEVEL
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 1441
+        width: 718
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d51dde1b2928c70800000000000000
+      internalID: 8971894700572237057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map chunks-FLOOR-TUBE
       rect:
         serializedVersion: 2
         x: 1
-        y: 54
-        width: 111
-        height: 86
-      alignment: 9
-      pivot: {x: 0.4774775, y: 1.0639535}
+        y: 282
+        width: 352
+        height: 682
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 959b7e85c1e147850800000000000000
-      internalID: 6373752479735593305
+      spriteID: cca9089f7856f9270800000000000000
+      internalID: 8259431876301724364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map chunks-FLOOR
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1740
+        width: 1011
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35ca217177cd94940800000000000000
+      internalID: 5280994442114935891
       vertices: []
       indices: 
       edges: []
@@ -229,7 +313,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 598
+        y: 1313
         width: 766
         height: 425
       alignment: 0
@@ -249,8 +333,8 @@ TextureImporter:
       name: ui-trash
       rect:
         serializedVersion: 2
-        x: 1
-        y: 142
+        x: 976
+        y: 985
         width: 471
         height: 454
       alignment: 0
