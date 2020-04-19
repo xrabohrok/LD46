@@ -186,8 +186,8 @@ TextureImporter:
       name: map chunks-2LEVEL-TUBE
       rect:
         serializedVersion: 2
-        x: 1449
-        y: 966
+        x: 1
+        y: 154
         width: 364
         height: 473
       alignment: 0
@@ -271,7 +271,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 282
+        y: 629
         width: 352
         height: 682
       alignment: 0
@@ -333,12 +333,12 @@ TextureImporter:
       name: ui-trash
       rect:
         serializedVersion: 2
-        x: 976
-        y: 985
-        width: 471
-        height: 454
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 355
+        y: 890
+        width: 437
+        height: 421
+      alignment: 9
+      pivot: {x: 0.49542335, y: 0.4655582}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
