@@ -7,14 +7,12 @@ public class SpreadSpawner : MonoBehaviour
 
     public Transform Spawnee;
 
-    public SwarmBrain parentBrain;
-
-    public int maxCount;
-    private int count;
+    // public int maxCount;
+    // private int count;
     public float radius;
 
-    public float secondsPerSpawn = 1;
-    private float timer;
+    // public float secondsPerSpawn = 1;
+    // private float timer;
 
     public List<string> colliderLayers;
     private int layerMask;
@@ -34,23 +32,23 @@ public class SpreadSpawner : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (Spawnee != null  && (count < maxCount || maxCount == 0))
-        {
-            if (timer > secondsPerSpawn)
-            {
-                spawnItem();
-                timer = 0;
-            }
-            else
-            {
-                timer += Time.deltaTime;
-            }
-        }
-    }
+    // // Update is called once per frame
+    // void Update()
+    // {
+    //
+    //     if (Spawnee != null  && (count < maxCount || maxCount == 0))
+    //     {
+    //         if (timer > secondsPerSpawn)
+    //         {
+    //             spawnItem();
+    //             timer = 0;
+    //         }
+    //         else
+    //         {
+    //             timer += Time.deltaTime;
+    //         }
+    //     }
+    // }
 
     public void spawnItem()
     {
@@ -72,15 +70,6 @@ public class SpreadSpawner : MonoBehaviour
 
         var item = GameObject.Instantiate(Spawnee, spot3d, Quaternion.identity).gameObject;
 
-        if(parentBrain != null)
-        {
-            var brain = item.GetComponent<AgentBrain>() ?? item.GetComponentInChildren<AgentBrain>();
-            if(brain != null)
-            {
-                brain.SetBrain(parentBrain);
-            }
-        }
-        count++;
 
     }
 
