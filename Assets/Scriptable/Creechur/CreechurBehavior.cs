@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D), typeof(Animator))]
-public class CreechurBehavior : MonoBehaviour
+public class CreechurBehavior : MonoBehaviour, IoutBoxable
 {
 
     [PropertyTooltip("Time Spent Wandering")]
@@ -81,6 +81,7 @@ public class CreechurBehavior : MonoBehaviour
     private bool isFacingLeft = true;
 
     private static MouseBehaviour mousey;
+    public int worth;
 
     public bool IsMature => isMature;
 
@@ -115,7 +116,7 @@ public class CreechurBehavior : MonoBehaviour
 
     private void wasMouseDowned(Clickable thing)
     {
-        Debug.Log("Attached monster");
+        // Debug.Log("Attached monster");
         nextGoal = goals.GRABBED;
         physical.freezeRotation = false;
         physical.gravityScale = 1;
@@ -127,7 +128,7 @@ public class CreechurBehavior : MonoBehaviour
 
     private void wasMouseUpped(Clickable thing)
     {
-        Debug.Log("Detached Monster");
+        // Debug.Log("Detached Monster");
 
         nextGoal = goals.WAIT;
         physical.freezeRotation = true;
@@ -357,5 +358,22 @@ public class CreechurBehavior : MonoBehaviour
                 nextGoal = goals.WAIT;
             }
         }
+    }
+
+    public bool isSellable()
+    {
+        //this will change with maturity
+        return true;
+    }
+
+    public int sellWorth()
+    {
+        return worth;
+    }
+
+    public void disposed()
+    {
+        //do the fallaway thing
+        // Destroy(gameObject);
     }
 }

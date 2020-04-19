@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789364f0e93fc3346abbb08e9c421d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snapLoc: {x: 0, y: -2.02}
+  snapLoc: {x: 0, y: -0.5}
 --- !u!233 &3663902787786827677
 HingeJoint2D:
   m_ObjectHideFlags: 0

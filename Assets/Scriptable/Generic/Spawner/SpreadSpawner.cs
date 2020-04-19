@@ -70,7 +70,6 @@ public class SpreadSpawner : MonoBehaviour
 
         var item = GameObject.Instantiate(Spawnee, spot3d, Quaternion.identity).gameObject;
 
-
     }
 
     void OnDrawGizmosSelected()

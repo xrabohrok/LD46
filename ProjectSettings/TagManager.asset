@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Mouse
   - food
+  - creechur
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: DragUI
+    uniqueID: 3063507617
+    locked: 0
+  - name: Creechur
+    uniqueID: 168372893
+    locked: 0
+  - name: UI
+    uniqueID: 1134549407
     locked: 0

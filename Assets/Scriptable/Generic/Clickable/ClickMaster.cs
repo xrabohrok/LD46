@@ -52,6 +52,11 @@ public class ClickMaster : MonoBehaviour {
 	        {
 	            clicked.ReportMouseUp();
 	        }
+
+            foreach (var curHover in hovered)
+            {
+                curHover.ReportMouseRelease();
+            }
 	    }
     }
 

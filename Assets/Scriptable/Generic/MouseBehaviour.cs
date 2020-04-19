@@ -9,14 +9,12 @@ public class MouseBehaviour : MonoBehaviour
     public Vector2 snapLoc = Vector2.down;
 
     private HingeJoint2D spring;
-    private Rigidbody2D rigid;
 
     private bool attached = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        rigid = GetComponent<Rigidbody2D>();
         spring = GetComponent<HingeJoint2D>();
     }
 

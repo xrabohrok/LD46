@@ -14,6 +14,8 @@ public class Clickable : MonoBehaviour
     private WasClicked wasClickedDownSubscribers;
     private WasClicked wasClickedUpSubscribers;
 
+    private WasClicked mouseUppedSubscriber;
+
     public void setClickDownCallback(WasClicked thing)
     {
         if (wasClickedDownSubscribers == null)
@@ -32,6 +34,16 @@ public class Clickable : MonoBehaviour
             return;
         }
         wasClickedUpSubscribers += thing;
+    }    
+    
+    public void setMouseReleaseSubscriber(WasClicked thing)
+    {
+        if (mouseUppedSubscriber == null)
+        {
+            mouseUppedSubscriber = thing;
+            return;
+        }
+        mouseUppedSubscriber += thing;
     }
 
     public Collider2D AttachedCollider
@@ -62,9 +74,15 @@ public class Clickable : MonoBehaviour
         wasClickedDownSubscribers?.Invoke(this);
     }
 
+    //This requires it was clicked first, slightly different from "release"
     public void ReportMouseUp()
     {
 
         wasClickedUpSubscribers?.Invoke(this);
+    }
+
+    public void ReportMouseRelease()
+    {
+        mouseUppedSubscriber?.Invoke(this);
     }
 }

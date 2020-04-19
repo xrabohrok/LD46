@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1508579256}
   m_Layer: 0
   m_Name: Creechur
-  m_TagString: Untagged
+  m_TagString: creechur
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3422334029901778240, guid: f4f6495ea90947441b40485ca7c57341,
+  m_Sprite: {fileID: -1589934200489776554, guid: f4f6495ea90947441b40485ca7c57341,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -144,6 +144,8 @@ MonoBehaviour:
   maxHunger: 50
   hungerDegredation: 1
   feelHungryThreshold: 40.6
+  corpsePrefab: {fileID: 2182744564889748107, guid: c3ab61c578d2aa64ebcfe6c211ecbf0a,
+    type: 3}
   foodPermanance: 5
   huntCooldownTime: 2
   maturityTime: 90
