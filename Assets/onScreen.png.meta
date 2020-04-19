@@ -47,6 +47,9 @@ TextureImporter:
   - first:
       213: 5280994442114935891
     second: map chunks-FLOOR
+  - first:
+      213: -191292536204422259
+    second: ui-trash-front
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -325,6 +328,27 @@ TextureImporter:
       bones: []
       spriteID: 7ddd7061f7738cae0800000000000000
       internalID: -1528911054522294825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui-trash-front
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 594
+        width: 438
+        height: 294
+      alignment: 9
+      pivot: {x: 0.49200913, y: 0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d831a5ba374685df0800000000000000
+      internalID: -191292536204422259
       vertices: []
       indices: 
       edges: []
