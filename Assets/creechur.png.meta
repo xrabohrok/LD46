@@ -86,6 +86,21 @@ TextureImporter:
   - first:
       213: 7398164958404660025
     second: small-body
+  - first:
+      213: -2426522040876917460
+    second: big-hang
+  - first:
+      213: 3293427468223203336
+    second: big-walk1
+  - first:
+      213: 275133069545897931
+    second: big-walk2
+  - first:
+      213: -8974350530222198555
+    second: big-walk3
+  - first:
+      213: -1824576676082270774
+    second: big-walk4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -183,11 +198,32 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+      name: big-hang
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 315
+        width: 156
+        height: 196
+      alignment: 9
+      pivot: {x: 0.55128205, y: 0.52040815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d10e16f03435ed0800000000000000
+      internalID: -2426522040876917460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: big-idle1
       rect:
         serializedVersion: 2
-        x: 130
-        y: 627
+        x: 770
+        y: 334
         width: 125
         height: 177
       alignment: 9
@@ -207,8 +243,8 @@ TextureImporter:
       name: big-idle2
       rect:
         serializedVersion: 2
-        x: 257
-        y: 462
+        x: 250
+        y: 125
         width: 113
         height: 179
       alignment: 9
@@ -228,8 +264,8 @@ TextureImporter:
       name: big-idle3
       rect:
         serializedVersion: 2
-        x: 1
-        y: 516
+        x: 127
+        y: 122
         width: 121
         height: 182
       alignment: 9
@@ -249,8 +285,8 @@ TextureImporter:
       name: big-idle4
       rect:
         serializedVersion: 2
-        x: 386
-        y: 664
+        x: 514
+        y: 329
         width: 125
         height: 182
       alignment: 9
@@ -267,11 +303,95 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: big-walk1
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 312
+        width: 114
+        height: 199
+      alignment: 9
+      pivot: {x: 0.64912283, y: 0.5276382}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80845f045da94bd20800000000000000
+      internalID: 3293427468223203336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big-walk2
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 306
+        width: 123
+        height: 205
+      alignment: 9
+      pivot: {x: 0.7154471, y: 0.5121951}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcffe3ca11871d300800000000000000
+      internalID: 275133069545897931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big-walk3
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 309
+        width: 112
+        height: 202
+      alignment: 9
+      pivot: {x: 0.58035713, y: 0.48019803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e0744cadb3b47380800000000000000
+      internalID: -8974350530222198555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big-walk4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 104
+        width: 124
+        height: 209
+      alignment: 9
+      pivot: {x: 0.38709676, y: 0.50239235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acd37ac1e2dcda6e0800000000000000
+      internalID: -1824576676082270774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: food-banana
       rect:
         serializedVersion: 2
-        x: 336
-        y: 937
+        x: 570
+        y: 98
         width: 45
         height: 48
       alignment: 9
@@ -291,8 +411,8 @@ TextureImporter:
       name: small-body
       rect:
         serializedVersion: 2
-        x: 1
-        y: 804
+        x: 641
+        y: 331
         width: 127
         height: 180
       alignment: 9
@@ -312,8 +432,8 @@ TextureImporter:
       name: small-die1
       rect:
         serializedVersion: 2
-        x: 124
-        y: 539
+        x: 771
+        y: 246
         width: 111
         height: 86
       alignment: 9
@@ -333,8 +453,8 @@ TextureImporter:
       name: small-die2
       rect:
         serializedVersion: 2
-        x: 124
-        y: 451
+        x: 644
+        y: 99
         width: 111
         height: 86
       alignment: 9
@@ -354,8 +474,8 @@ TextureImporter:
       name: small-die3
       rect:
         serializedVersion: 2
-        x: 1
-        y: 428
+        x: 771
+        y: 158
         width: 111
         height: 86
       alignment: 9
@@ -375,8 +495,8 @@ TextureImporter:
       name: small-die4
       rect:
         serializedVersion: 2
-        x: 372
-        y: 485
+        x: 884
+        y: 157
         width: 111
         height: 86
       alignment: 9
@@ -396,8 +516,8 @@ TextureImporter:
       name: small-die5
       rect:
         serializedVersion: 2
-        x: 220
-        y: 255
+        x: 444
+        y: 194
         width: 82
         height: 116
       alignment: 9
@@ -417,8 +537,8 @@ TextureImporter:
       name: small-die6
       rect:
         serializedVersion: 2
-        x: 102
-        y: 202
+        x: 365
+        y: 175
         width: 77
         height: 132
       alignment: 9
@@ -438,8 +558,8 @@ TextureImporter:
       name: small-die7
       rect:
         serializedVersion: 2
-        x: 257
-        y: 643
+        x: 136
+        y: 7
         width: 124
         height: 113
       alignment: 9
@@ -459,8 +579,8 @@ TextureImporter:
       name: small-die8
       rect:
         serializedVersion: 2
-        x: 201
-        y: 987
+        x: 528
+        y: 187
         width: 198
         height: 36
       alignment: 9
@@ -480,8 +600,8 @@ TextureImporter:
       name: small-die9
       rect:
         serializedVersion: 2
-        x: 1
-        y: 986
+        x: 444
+        y: 148
         width: 198
         height: 37
       alignment: 9
@@ -501,8 +621,8 @@ TextureImporter:
       name: small-hang
       rect:
         serializedVersion: 2
-        x: 114
-        y: 336
+        x: 262
+        y: 10
         width: 104
         height: 113
       alignment: 9
@@ -522,8 +642,8 @@ TextureImporter:
       name: small-idle-sad1
       rect:
         serializedVersion: 2
-        x: 372
-        y: 397
+        x: 757
+        y: 70
         width: 111
         height: 86
       alignment: 9
@@ -543,8 +663,8 @@ TextureImporter:
       name: small-idle-sad2
       rect:
         serializedVersion: 2
-        x: 130
-        y: 806
+        x: 897
+        y: 423
         width: 126
         height: 88
       alignment: 9
@@ -564,8 +684,8 @@ TextureImporter:
       name: small-idle-sad3
       rect:
         serializedVersion: 2
-        x: 401
-        y: 936
+        x: 870
+        y: 68
         width: 110
         height: 87
       alignment: 9
@@ -585,8 +705,8 @@ TextureImporter:
       name: small-idle-sad4
       rect:
         serializedVersion: 2
-        x: 1
-        y: 327
+        x: 368
+        y: 47
         width: 99
         height: 99
       alignment: 9
@@ -606,8 +726,8 @@ TextureImporter:
       name: small-idle1
       rect:
         serializedVersion: 2
-        x: 372
-        y: 485
+        x: 884
+        y: 157
         width: 111
         height: 86
       alignment: 9
@@ -627,8 +747,8 @@ TextureImporter:
       name: small-idle2
       rect:
         serializedVersion: 2
-        x: 258
-        y: 758
+        x: 897
+        y: 333
         width: 126
         height: 88
       alignment: 9
@@ -648,8 +768,8 @@ TextureImporter:
       name: small-idle3
       rect:
         serializedVersion: 2
-        x: 237
-        y: 373
+        x: 570
+        y: 9
         width: 110
         height: 87
       alignment: 9
@@ -669,8 +789,8 @@ TextureImporter:
       name: small-idle4
       rect:
         serializedVersion: 2
-        x: 349
-        y: 296
+        x: 469
+        y: 47
         width: 99
         height: 99
       alignment: 9
@@ -690,8 +810,8 @@ TextureImporter:
       name: small-walk1
       rect:
         serializedVersion: 2
-        x: 336
-        y: 848
+        x: 884
+        y: 245
         width: 131
         height: 86
       alignment: 9
@@ -711,8 +831,8 @@ TextureImporter:
       name: small-walk2
       rect:
         serializedVersion: 2
-        x: 201
-        y: 896
+        x: 1
+        y: 13
         width: 133
         height: 89
       alignment: 9
@@ -732,8 +852,8 @@ TextureImporter:
       name: small-walk3
       rect:
         serializedVersion: 2
-        x: 383
-        y: 573
+        x: 652
+        y: 240
         width: 117
         height: 89
       alignment: 9
@@ -753,8 +873,8 @@ TextureImporter:
       name: small-walk4
       rect:
         serializedVersion: 2
-        x: 1
-        y: 700
+        x: 528
+        y: 225
         width: 122
         height: 102
       alignment: 9
