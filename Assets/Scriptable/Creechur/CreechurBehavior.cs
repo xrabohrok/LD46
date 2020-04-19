@@ -33,6 +33,8 @@ public class CreechurBehavior : MonoBehaviour
     [PropertyRange(0, "maxHunger")]
     public float feelHungryThreshold = 50;
 
+    public Transform corpsePrefab;
+
     public float foodPermanance = 5;
 
     public float huntCooldownTime = 2;
@@ -131,6 +133,7 @@ public class CreechurBehavior : MonoBehaviour
         physical.freezeRotation = true;
         physical.transform.rotation = Quaternion.identity;
         physical.gravityScale = 0;
+        physical.velocity = Vector2.zero;
         anim.SetBool("isPickedUp", false);
     }
 
@@ -172,12 +175,12 @@ public class CreechurBehavior : MonoBehaviour
         {
             Debug.Log("Now Hungry");
             currEmote = emotes.HUNGRY;
-            anim.SetBool("isHungry", true);
+            anim.SetBool("IsHungry", true);
         }
         else if (currentHunger >= feelHungryThreshold)
         {
             currEmote = emotes.NEUTRAL;
-            anim.SetBool("isHungry", false);
+            anim.SetBool("IsHungry", false);
 
         }
 
@@ -223,7 +226,10 @@ public class CreechurBehavior : MonoBehaviour
     private void DieAction()
     {
         //play death anim, for now just wink out.
-        Destroy(gameObject);
+        if (lastGoal != goals.DIE)
+        {
+            anim.SetTrigger("Dead");
+        }
     }
 
     private void HuntAction()
@@ -257,8 +263,6 @@ public class CreechurBehavior : MonoBehaviour
         {
             nextGoal = goals.WAIT;
         }
-
-
     }
 
     private void GrabbedAction()
@@ -310,6 +314,17 @@ public class CreechurBehavior : MonoBehaviour
             nextGoal = goals.HUNTING;
         }
     }
+
+    public void die()
+    {
+        Destroy(gameObject);
+        //spawn corpse
+        if (corpsePrefab != null)
+        {
+            Instantiate(corpsePrefab, this.transform.position, Quaternion.identity);
+        }
+    }
+
 
     void OnTriggerEnter2D(Collider2D col)
     {
