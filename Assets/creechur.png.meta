@@ -80,6 +80,9 @@ TextureImporter:
   - first:
       213: 7353773981955318491
     second: small-idle-sad4
+  - first:
+      213: -8344577279188685693
+    second: food-banana
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -256,6 +259,27 @@ TextureImporter:
       bones: []
       spriteID: 5dd5c690c65d95c40800000000000000
       internalID: 5501663079801052629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: food-banana
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 937
+        width: 45
+        height: 48
+      alignment: 9
+      pivot: {x: 0.51111114, y: 0.47916666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38ca9211d2b123c80800000000000000
+      internalID: -8344577279188685693
       vertices: []
       indices: 
       edges: []
