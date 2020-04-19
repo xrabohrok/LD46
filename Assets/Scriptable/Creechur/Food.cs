@@ -14,4 +14,9 @@ class Food : MonoBehaviour
 
         return claimant == registrant;
     }
+
+    public void getAte()
+    {
+        Destroy(this.gameObject);
+    }
 }

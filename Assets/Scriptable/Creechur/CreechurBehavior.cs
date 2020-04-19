@@ -42,6 +42,14 @@ public class CreechurBehavior : MonoBehaviour
     private float relaxTimer;
     private float huntCooldown = -1;
 
+    public float maturityTime = 90;
+
+    [PropertyRange(0, 1), PropertyTooltip("How Much how much deviance from the maturity there can be")]
+    public float maturityVariance = .2f;
+
+    private float maturityTimer;
+    private Boolean isMature;
+
     public goals startState = goals.WANDER;
 
     public enum goals { 
@@ -67,6 +75,7 @@ public class CreechurBehavior : MonoBehaviour
 
     private static MouseBehaviour mousey;
 
+    public bool IsMature => isMature;
 
 
     // Start is called before the first frame update
@@ -91,6 +100,7 @@ public class CreechurBehavior : MonoBehaviour
 
         currentHunger = maxHunger;
         currEmote = emotes.NEUTRAL;
+        maturityTimer = WeightedRandomRange(maturityVariance, maturityTime);
 
     }
 
@@ -162,6 +172,15 @@ public class CreechurBehavior : MonoBehaviour
         currentHunger -= hungerDegredation * Time.deltaTime;
         huntCooldown -= Time.deltaTime;
 
+        if (maturityTimer > 0)
+        {
+            maturityTimer -= Time.deltaTime;
+        }
+        else
+        {
+            isMature = true;
+        }
+
         if (relaxTimer > 0)
         {
             relaxTimer -= Time.deltaTime;
@@ -175,6 +194,8 @@ public class CreechurBehavior : MonoBehaviour
         {
             nextGoal = goals.DIE;
         }
+
+        //set maturity bit
 
     }
 
@@ -297,7 +318,7 @@ public class CreechurBehavior : MonoBehaviour
             {
                 currentHunger = maxHunger;
                 //play eat anim
-                Destroy(currSeenFood);
+                food.getAte();
                 currSeenFood = null;
                 nextGoal = goals.WAIT;
             }
