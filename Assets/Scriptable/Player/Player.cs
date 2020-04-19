@@ -21,6 +21,17 @@ public class Player : MonoBehaviour
         Debug.Log($"Money is : {monies}");
     }
 
+    public bool trySpendMoney(int monies)
+    {
+        if (money < monies)
+        {
+            return false;
+        }
+
+        money -= monies;
+        return true;
+    }
+
     // Update is called once per frame
     // void Update()
     // {
