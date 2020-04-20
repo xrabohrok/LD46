@@ -9,6 +9,10 @@ public class Player : MonoBehaviour
 
     public int Money => money;
 
+    public delegate void moneyChange(int newAmount);
+
+    private moneyChange moneySubscribers;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +33,18 @@ public class Player : MonoBehaviour
         }
 
         money -= monies;
+        moneySubscribers?.Invoke(money);
         return true;
+    }
+
+    public void registerMoneyChange(moneyChange newThingy)
+    {
+        if (moneySubscribers == null)
+        {
+            moneySubscribers = newThingy;
+            return;
+        }
+        moneySubscribers += newThingy;
     }
 
     // Update is called once per frame

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ public class UIController : MonoBehaviour
 
     public Button buyButton;
     public Button foodButton;
+
+    public TextMeshProUGUI moneyStuff;
 
     private SpreadSpawner spawner;
 
@@ -22,6 +25,17 @@ public class UIController : MonoBehaviour
         buyButton.onClick.AddListener(onBuyCritter);
 
         spawner = GameObject.FindGameObjectWithTag("spawner").GetComponent<SpreadSpawner>();
+
+        player.registerMoneyChange(newMoneyAmount);
+        newMoneyAmount(player.startMoney);
+    }
+
+    private void newMoneyAmount(int newAmount)
+    {
+        if (moneyStuff != null)
+        {
+            moneyStuff.text = $"${newAmount}";
+        }
     }
 
     private void onBuyCritter()
