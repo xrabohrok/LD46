@@ -12,6 +12,15 @@ public class MouseBehaviour : MonoBehaviour
 
     private bool attached = false;
 
+    private bool lockedCreechurSelection;
+
+    public bool LockedCreechurSelection => lockedCreechurSelection;
+
+    public void requestCreechurSelection(bool newState)
+    {
+        lockedCreechurSelection = newState;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,21 +29,28 @@ public class MouseBehaviour : MonoBehaviour
 
     public void Attach(Rigidbody2D obj)
     {
-        Debug.Log("ATTACHED");
-        this.enabled = true;
-        this.attached = true;
-        stickToMouse();
-        spring.connectedBody = obj;
-        obj.transform.position = new Vector3(this.transform.position.x, this.transform.position.y) + new Vector3(snapLoc.x, snapLoc.y);
+        if (!lockedCreechurSelection)
+        {
+            Debug.Log("ATTACHED");
+            this.enabled = true;
+            this.attached = true;
+            stickToMouse();
+            spring.connectedBody = obj;
+            obj.transform.position = new Vector3(this.transform.position.x, this.transform.position.y) +
+                                     new Vector3(snapLoc.x, snapLoc.y);
+        }
 
     }
 
     private void Detach()
     {
-        Debug.Log("REMOVED");
+        if (!lockedCreechurSelection)
+        {
+            Debug.Log("REMOVED");
 
-        spring.connectedBody = null;
-        this.enabled = false;
+            spring.connectedBody = null;
+            this.enabled = false;
+        }
     }
 
     // Update is called once per frame

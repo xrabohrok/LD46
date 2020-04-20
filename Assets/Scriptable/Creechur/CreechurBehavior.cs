@@ -117,26 +117,31 @@ public class CreechurBehavior : MonoBehaviour, IoutBoxable
 
     private void wasMouseDowned(Clickable thing)
     {
-        // Debug.Log("Attached monster");
-        nextGoal = goals.GRABBED;
-        physical.freezeRotation = false;
-        physical.gravityScale = 1;
-        anim.SetBool("isPickedUp", true);
+        if (!mousey.LockedCreechurSelection)
+        {
+            // Debug.Log("Attached monster");
+            nextGoal = goals.GRABBED;
+            physical.freezeRotation = false;
+            physical.gravityScale = 1;
+            anim.SetBool("isPickedUp", true);
 
 
-        mousey.Attach(physical);
+            mousey.Attach(physical);
+        }
     }
 
     private void wasMouseUpped(Clickable thing)
     {
         // Debug.Log("Detached Monster");
-
-        nextGoal = goals.WAIT;
-        physical.freezeRotation = true;
-        physical.transform.rotation = Quaternion.identity;
-        physical.gravityScale = 0;
-        physical.velocity = Vector2.zero;
-        anim.SetBool("isPickedUp", false);
+        if (!mousey.LockedCreechurSelection)
+        {
+            nextGoal = goals.WAIT;
+            physical.freezeRotation = true;
+            physical.transform.rotation = Quaternion.identity;
+            physical.gravityScale = 0;
+            physical.velocity = Vector2.zero;
+            anim.SetBool("isPickedUp", false);
+        }
     }
 
     private float WeightedRandomRange(float percentWeightThatIsRandom, float maxValue)

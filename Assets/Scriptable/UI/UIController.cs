@@ -16,6 +16,9 @@ public class UIController : MonoBehaviour
     private SpreadSpawner spawner;
 
     private Player player;
+    private MouseBehaviour mouse;
+
+    private bool foodModeEnabled;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +26,14 @@ public class UIController : MonoBehaviour
         player = FindObjectOfType<Player>();
 
         buyButton.onClick.AddListener(onBuyCritter);
+        foodButton.onClick.AddListener(onFoodModeToggle);
 
         spawner = GameObject.FindGameObjectWithTag("spawner").GetComponent<SpreadSpawner>();
 
         player.registerMoneyChange(newMoneyAmount);
         newMoneyAmount(player.startMoney);
+
+        mouse = GameObject.FindObjectOfType<MouseBehaviour>();
     }
 
     private void newMoneyAmount(int newAmount)
@@ -44,6 +50,12 @@ public class UIController : MonoBehaviour
         {
             spawner.spawnItem();
         }
+    }
+
+    private void onFoodModeToggle()
+    {
+        foodModeEnabled = !foodModeEnabled;
+        mouse.requestCreechurSelection(foodModeEnabled);
     }
 
     // Update is called once per frame
